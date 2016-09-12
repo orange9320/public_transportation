@@ -1,0 +1,242 @@
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #999;
+}
+
+#main-container {
+	font-size: 18px;
+	margin: 0 auto;
+	max-width: 1200px;
+	min-height: calc(100vh - 100px);
+}
+
+header {
+	height: 100px;
+	background-color: #FF8400;
+	margin: 0;
+	padding: 24px 0;
+	width: 100%;
+}
+
+h2 > p {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#welcome {
+	padding-top: calc(50vh - 320px);
+}
+
+#welcome > * {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#agency-info {
+	margin: 50px auto 0;
+}
+
+#agency-info > * {
+	margin: 0 auto;
+}
+
+.large-text {
+	font-size: 5em;
+	margin: 0 auto;
+}
+
+.red-text {
+	color: red;
+}
+
+#app-title {
+	color: #FFF;
+	text-align: center;
+	margin: 0;
+	width: calc(100% - 60px);
+	float: right;
+}
+
+#ham-menu {
+	width: 50px;
+	height: 60px;
+	border: 0;
+	padding: 0;
+	background-color: #FF8400;
+}
+
+#ham-menu:before {
+	content: '\2261';
+	font-size: 2.3em;
+	font-weight: bold;
+	color: #000;
+}
+
+main {
+	min-height: calc(100vh - 100px);
+	background-color: #FFF;
+	margin-left: 300px;
+}
+
+aside {
+	background-color: #FFE454;
+	min-height: calc(100vh - 100px);
+	width: 300px;
+	padding: 30px;
+	float: left;
+}
+
+form>div {
+	margin-top: 20px;
+}
+
+select {
+	max-height: 300px;
+	width: 95%;
+}
+
+#date-expect {
+	width: 95%;
+}
+
+#search-button {
+	width: 95%;
+	margin-top: 20px;
+}
+
+.train-num {
+	font-size: 2.4em;
+	color: red;
+	font-weight: bold;
+}
+
+.notify {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0;
+	padding-top: 40px;
+}
+
+.notify>span {
+	color: red;
+}
+
+#trip-container {
+
+	padding-bottom: 40px;
+}
+
+.trip-item {
+	max-width: 600px;
+	min-width: 320px;
+	width: calc(90% - 30px);
+	margin: auto;
+	margin-top: 40px;
+	padding: 20px;
+	background-color: #DFDFDF;
+	border-radius: 6px;
+	border:	2px #BBB solid;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.depart-st,
+.arrival-st {
+	width: 100%;
+	max-width: 260px;
+	margin: 10px 0;
+	float: left;
+}
+
+.flex-row {
+	overflow: auto;
+}
+
+.direction,
+.stations,
+.train-time {
+	font-weight: bold;
+	margin:	0;
+}
+
+.stations,
+.train-time {
+	font-size: 1.7em;
+}
+
+.connect-stop-button {
+	border-radius: 8px;
+	background-color: #4D7DEE;
+	font-weight: bold;
+	color: #FFF;
+	width: 200px;
+	height: 60px;
+	margin-top: 20px;
+}
+
+table {
+	width: 100%;
+	margin-top: 30px;
+}
+
+td {
+	/*width: 50%;*/
+	font-size: 1.3em;
+	font-weight: bold;
+	padding: 5px 20px;
+}
+
+.right-text {
+	text-align: right;
+}
+
+@media screen and (max-width: 600px){
+	aside {
+		width: 100%;
+		height: auto;
+		min-height: auto;
+		float: none;
+	}
+
+	main {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 500px){
+	#app-title {
+		font-size: 1.5em;
+		margin: 10px 0;
+	}
+}
+
+@media screen and (max-width: 400px){
+	#app-title {
+		font-size: 1.3em;
+		margin: 10px 0;
+	}
+}
+
+
+@media screen and (max-width: 900px){
+	.large-text {
+		font-size: 3.5em;
+	}
+
+	#welcome>h2 {
+		font-size: 0.9em;
+	}
+
+	#agency-info>p {
+		font-size: 0.7em;
+	}
+
+	td {
+		font-size: 0.9em;
+	}
+}

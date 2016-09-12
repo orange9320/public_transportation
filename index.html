@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Public Transportation App
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="build/css/style.css">
+    <script src="/sw.js"></script>
+</head>
+
+<body>
+    <div id="main-container">
+        <header>
+            <div class="head-container">
+                <h1 id="app-title">
+				Public Transportation
+			</h1>
+                <button id="ham-menu" data-bind="event:{click: switchAside}">
+                </button>
+            </div>
+        </header>
+
+
+        <aside id="search-place" data-bind="visible:isAsideShow">
+        	<form>
+        		<div>
+	        		<label for="depart-stop">
+	        			Depart Stop
+	        		</label>
+        			<select id="depart-stop" data-bind="foreach: stops">
+        				<option data-bind="text: stop_name"></option>
+        			</select>
+        		</div>
+
+
+        		<div>
+	        		<label for="arrival-stop">
+	        			Arrival Stop
+	        		</label>
+        			<select id="arrival-stop" data-bind="foreach: stops">
+        				<option data-bind="text: stop_name"></option>
+        			</select>
+        		</div>
+
+        		<div>
+        			<label for="date-expect">Depart date: </label>
+        			<input type="date" id="date-expect">
+        		</div>
+
+        		<button id="search-button" data-bind="event: {click: getTrips}">Search</button>
+        	</form>
+        </aside>
+
+        <main id="mainbody">
+            <div id="welcome" data-bind="visible:isInit" style="display:none">
+                <h2> 
+        			<p class="large-text red-text">Welcome</p>
+        			<p>to search public train transportation.</p>
+        		</h2>
+        		<div id="agency-info">
+	                <p> All data are provided by: </p>
+	                <p><img id="caltrain-logo" src="src/img/Caltrain_logo.svg"></p>
+	                <p> To search the agency, <a href="http://www.caltrain.com/">click here</a>.</p>
+        		</div>
+            </div>
+
+
+
+            <div id="trip-container" style="display:none" data-bind="visible: !isInit()">
+                <p class="notify"><zx data-bind="visible: hasTrip">Sorry, there's no </zx>Avaible Lines <br>From <span data-bind="text: departStop"></span> <br>To <span data-bind="text: arrivalStop"></span></p>
+                <div data-bind="foreach: trips">
+                    <div class="trip-item">
+                        <div class="train-num" data-bind="text: lineNum"></div>
+
+
+                        <div class="flex-row">
+                            <div class="depart-st">
+                                <p class="direction">Depart</p>
+                                <p class="train-time" data-bind="text: departTime"></p>
+                            </div>
+
+                            <div class="depart-st">
+                                <p class="direction">Arrive</p>
+                                <p class="train-time" data-bind="text: arrivalTime"></p>
+                            </div>
+                            <div class="cut-line"></div>
+                        </div>
+
+
+                        <div class="connect-stop">
+                            <p><b>Details:</b></p>
+                            <table data-bind= "foreach: lineStops">
+                                <tr>
+                                    <td class="left-text" data-bind="text: self.stopMap[c]">
+                                    </td>
+                                    <td class="right-text" data-bind="text: b">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </main>
+
+    </div>
+
+
+
+    <script src="build/js/all.min.js"></script>
+</body>
+
+</html>

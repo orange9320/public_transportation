@@ -1,0 +1,21 @@
+{
+  "name": "public_transportation_app",
+  "version": "1.0.0",
+  "description": "A project for Udacity senior web developer project",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Zhenbang Ju",
+  "license": "ISC"
+}
