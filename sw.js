@@ -1,13 +1,13 @@
 var CACHE_NAME = 'site-cache-v4';
 var urlsToCache = [
-    '/',
-    '/index.html',
-    '/build/css/style.css',
-    '/build/js/all.min.js',
-    '/json_data/caltrain/stops.json',
-    '/json_data/caltrain/stop_times_weekday.json',
-    '/json_data/caltrain/stop_times_saturday.json',
-    '/json_data/caltrain/stop_times_sunday.json'
+    '/public_transportation/',
+    '/public_transportation/index.html',
+    '/public_transportation/build/css/style.css',
+    '/public_transportation/build/js/all.min.js',
+    '/public_transportation/json_data/caltrain/stops.json',
+    '/public_transportation/json_data/caltrain/stop_times_weekday.json',
+    '/public_transportation/json_data/caltrain/stop_times_saturday.json',
+    '/public_transportation/json_data/caltrain/stop_times_sunday.json'
 ];
 
 self.addEventListener('install', function(event) {
