@@ -49,7 +49,7 @@ function AppViewModel() {
 	};
 
 	self.queryStops = function(){
-		$.getJSON('/json_data/caltrain/stops.json')
+		$.getJSON('/public_transportation/json_data/caltrain/stops.json')
 			.done(function(response){
 				//Update database
 				var stopDB = TAFFY().store('stops');
@@ -86,7 +86,7 @@ function AppViewModel() {
 
 
 	self.queryWeekTrips = function(){
-		$.getJSON('/json_data/caltrain/stop_times_weekday.json')
+		$.getJSON('/public_transportation/json_data/caltrain/stop_times_weekday.json')
 			.done(function(response){
 				var weekdayDB = TAFFY().store('weekdayDB');
 				weekdayDB().remove();
@@ -95,7 +95,7 @@ function AppViewModel() {
 	};
 
 	self.querySatTrips = function(){
-		$.getJSON('/json_data/caltrain/stop_times_saturday.json')
+		$.getJSON('/public_transportation/json_data/caltrain/stop_times_saturday.json')
 			.done(function(response){
 				var saturdayDB = TAFFY().store('saturdayDB');
 				saturdayDB().remove();
@@ -104,7 +104,7 @@ function AppViewModel() {
 	};
 
 	self.querySunTrips = function(){
-		$.getJSON('/json_data/caltrain/stop_times_sunday.json')
+		$.getJSON('/public_transportation/json_data/caltrain/stop_times_sunday.json')
 			.done(function(response){
 				var sundayDB = TAFFY().store('sundayDB');
 				sundayDB().remove();
