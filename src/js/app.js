@@ -188,6 +188,6 @@ function AppViewModel() {
 	self.pageInit();
 }
 
-navigator.serviceWorker.register('/sw.js');
+navigator.serviceWorker.register('/public_transportation/sw.js');
 ko.applyBindings(new AppViewModel());
 $(document).ready(self.pageInit);
